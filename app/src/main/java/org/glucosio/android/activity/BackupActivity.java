@@ -83,6 +83,7 @@ public class BackupActivity extends AppCompatActivity {
     private int REQUEST_CODE_SELECT = 3;
     private int REQUEST_CODE_PICKER_FOLDER = 4;
 
+    private String GOOGLE_DRIVE_TEXT_FOLDER = "Google Drive/";
     private Backup backup;
     private GoogleApiClient mGoogleApiClient;
     private String TAG = "glucosio_drive_backup";
@@ -173,7 +174,8 @@ public class BackupActivity extends AppCompatActivity {
                             return;
                         }
                         Metadata metadata = result.getMetadata();
-                        folderTextView.setText(metadata.getTitle());
+                        String folderText = GOOGLE_DRIVE_TEXT_FOLDER + metadata.getTitle();
+                        folderTextView.setText(folderText);
                     }
                 }
         );

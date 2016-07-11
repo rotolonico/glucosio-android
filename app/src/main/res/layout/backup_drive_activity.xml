@@ -12,10 +12,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:weightSum="1">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -54,13 +56,16 @@
                     android:layout_height="1px"
                     android:layout_marginTop="8dp"
                     android:background="@color/glucosio_separator"/>
+
                 <LinearLayout
                     android:id="@+id/activity_backup_drive_button_folder"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="?android:attr/selectableItemBackground"
                     android:paddingTop="8dp"
-                    android:orientation="horizontal">
+                    android:paddingBottom="8dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.19">
                     <TextView fontPath="fonts/lato-bold.ttf"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -80,6 +85,7 @@
                         android:gravity="right"
                         android:text="@string/activity_backup_drive_folder_not_set"/>
                 </LinearLayout>
+
                 <TextView
                     android:id="@+id/activity_backup_drive_button_manage_drive"
                     android:layout_width="wrap_content"
@@ -93,12 +99,7 @@
                     android:textSize="12sp"
                     android:textColor="@color/glucosio_text_light"
                     android:textStyle="bold" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/glucosio_separator"/>
+
                 <TextView fontPath="fonts/lato-bold.ttf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
